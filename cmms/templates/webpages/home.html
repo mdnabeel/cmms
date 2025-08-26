@@ -1,0 +1,282 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMMS - Computerized Machine Management System</title>
+    <link rel="stylesheet" href="{% static './css/styles.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-cogs"></i>
+                <span>CMMS Pro</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="{% url 'login' %}" class="nav-link login-btn">Login</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Advanced <span class="gradient-text">Machine Management</span> System
+                </h1>
+                <p class="hero-description">
+                    Streamline your maintenance operations with our comprehensive CMMS solution. 
+                    From preventive maintenance to work order management, optimize your equipment performance.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dashboard-preview">
+                    <div class="preview-header">
+                        <div class="preview-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="preview-title">CMMS Dashboard</span>
+                    </div>
+                    <div class="preview-content">
+                        <div class="preview-stats">
+                            <div class="stat-card">
+                                <i class="fas fa-tools"></i>
+                                <div>
+                                    <span class="stat-number">24</span>
+                                    <span class="stat-label">Active Work Orders</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-chart-line"></i>
+                                <div>
+                                    <span class="stat-number">98%</span>
+                                    <span class="stat-label">Equipment Uptime</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-animation"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive CMMS Features</h2>
+                <p>Everything you need to manage your maintenance operations efficiently</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Assets Management</h3>
+                    <p>Complete asset tracking with historical records, equipment parts list, and comprehensive repair history management.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Work Order Management</h3>
+                    <p>Automated work order generation, assignment, and tracking with email notifications and approval workflows.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Preventive Maintenance</h3>
+                    <p>Schedule and control preventive maintenance activities based on run hours, time intervals, or equipment conditions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Inventory Control</h3>
+                    <p>Real-time spare parts availability, automated purchase requests, and multi-location inventory management.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Team Management</h3>
+                    <p>Organize maintenance teams, assign roles and permissions, and track team performance across all operations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Performance Reports</h3>
+                    <p>Generate OEE, availability, reliability reports and maintenance analytics for continuous improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview Section -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Dashboard Analytics</h2>
+                <p>Real-time insights into your maintenance operations</p>
+            </div>
+            <div class="dashboard-demo">
+                <div class="demo-sidebar">
+                    <div class="sidebar-item active">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Overview</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fas fa-tools"></i>
+                        <span>Work Orders</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Equipment</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fas fa-warehouse"></i>
+                        <span>Inventory</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Reports</span>
+                    </div>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-header">
+                        <h3>Dashboard Overview</h3>
+                        <div class="demo-filters">
+                            <button class="filter-btn active">Today</button>
+                            <button class="filter-btn">Week</button>
+                            <button class="filter-btn">Month</button>
+                        </div>
+                    </div>
+                    <div class="demo-metrics">
+                        <div class="metric-card">
+                            <div class="metric-icon success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value">156</span>
+                                <span class="metric-label">Completed Orders</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon warning">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value">24</span>
+                                <span class="metric-label">Pending Orders</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon info">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value">95.2%</span>
+                                <span class="metric-label">Equipment OEE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <h2>Why Choose Our CMMS?</h2>
+                    <div class="benefit-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Web-Based Access</h4>
+                            <p>Access your CMMS from any commercial web browser, anywhere, anytime.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-robot"></i>
+                        <div>
+                            <h4>Automated Workflows</h4>
+                            <p>Automatic work order generation based on equipment conditions and schedules.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>Secure & Reliable</h4>
+                            <p>Enterprise-grade security with role-based access control and data protection.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-visual">
+                    <div class="floating-cards">
+                        <div class="floating-card">
+                            <i class="fas fa-bell"></i>
+                            <span>Real-time Alerts</span>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Ready</span>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Based</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Optimize Your Maintenance Operations?</h2>
+                <p>Join hundreds of companies already using our CMMS to improve efficiency and reduce downtime.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large">Start Free Trial</button>
+                    <button class="btn btn-outline btn-large">Schedule Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {% include 'includes/footer.html' %}
+
+    <script src="{% static './js/script.js' %}"></script>
+</body>
+</html>
