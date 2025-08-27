@@ -1,36 +1,7 @@
 {%load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - CMMS Pro</title>
-    <link rel="stylesheet" href="{% static './css/styles.css' %}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-cogs"></i>
-                <span>CMMS Pro</span>
-            </div>
-            <div class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#dashboard" class="nav-link">Dashboard</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="login.html" class="nav-link login-btn">Login</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+{% include 'includes/header.html' %}
+
 
     <!-- Hero Section -->
     <section class="contact-hero">
@@ -324,54 +295,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <i class="fas fa-cogs"></i>
-                        <span>CMMS Pro</span>
-                    </div>
-                    <p>Advanced maintenance management for modern enterprises.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Training</a></li>
-                        <li><a href="#">System Status</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> +91 522 123 4567</li>
-                        <li><i class="fas fa-envelope"></i> support@cmmspro.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Lucknow, UP, India</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 CMMS Pro. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    {% include 'includes/footer.html' %}
 
     <script src="{% static './js/script.js' %}"></script>
    
